@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Светлая тема */
+body.light-theme {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-theme .reader {
+    background-color: #2d2d2d;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #007acc;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.controls button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #005a99;
+    color: white;
+}
+
+.reader {
+    flex: 1;
+    padding: 6rem 2rem 2rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.book-content {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.book-content pre {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.dark-theme .book-content pre {
+    background: #3d3d3d;
+}
+
+.bookmarks {
+    width: 250px;
+    padding: 6rem 1rem 2rem 1rem;
+    background: #f0f0f0;
+    border-left: 1px solid #ddd;
+}
+
+.dark-theme .bookmarks {
+    background: #2d2d2d;
+    border-left-color: #444;
+}
+
+.bookmarks ul {
+    list-style: none;
+}
+
+.bookmarks li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.dark-theme .bookmarks li {
+    border-bottom-color: #444;
+}
+
+#pdf-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+#pdf-controls button {
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#pdf-controls button:hover {
+    background: #0056b3;
+}
+
+#page-info {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#page-slider {
+    width: 150px;
+    cursor: pointer;
+}
+
+.dark-theme #pdf-controls button {
+    background: #555;
+}
+
+.dark-theme #pdf-controls button:hover {
+    background: #777;
+}
